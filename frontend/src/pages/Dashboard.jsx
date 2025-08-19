@@ -15,17 +15,18 @@ function Dashboard() {
 
 
     useEffect(() => {
-        if(isError) {
+        if (isError) {
             console.log(message);
         }
 
 
-        if(!user) {
+        if (!user) {
             navigate('/login')
         }
 
         dispatch(getGoals())
-        if(isLoading) {
+
+        if (isLoading) {
             return <Spinner />
         }
 
